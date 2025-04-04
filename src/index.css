@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Utility customizada para justificar texto */
+@layer utilities {
+  .text-justify {
+    text-align: justify;
+  }
+}
+
+/* Efeito Sparkle: define os estilos do brilho rosa */
+@layer utilities {
+  .sparkle {
+    pointer-events: none;
+    animation: fadeOut 0.8s forwards;
+  }
+}
+
+/* Keyframes para o efeito sparkle */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
