@@ -79,8 +79,6 @@ Barra de navegação com links para cada seção do portfólio.
 - **[React Scripts](https://www.npmjs.com/package/react-scripts)**  
   Scripts padrão para desenvolvimento e build em projetos React.
 
-- **(Opcional) [Three.js](https://threejs.org/)** & **[Vanta.js](https://github.com/tengbao/vanta)**  
-  Para criar efeitos visuais avançados (ex.: fundo holográfico ou outros efeitos animados).
 
 ---
 
