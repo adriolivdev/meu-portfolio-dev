@@ -4,31 +4,47 @@ import React from 'react';
 function Cursos() {
   const cursos = [
     {
-      title: "Frontend",
+      title: "Dev Full-Stack",
       certs: [
-        { name: "Certificado Frontend 1", link: "https://link-para-certificado-frontend1.com" },
-        { name: "Certificado Frontend 2", link: "https://link-para-certificado-frontend2.com" }
+        { name: "Lógica de programação.", link: "https://link-para-certificado-frontend1.com" },
+        { name: " Programming Básic.", link: "https://link-para-certificado-frontend2.com" },
+        { name: "DB Developer.", link: "https://link-para-certificado-frontend3.com" },
+        { name: "Object-Oriented Developer.", link: "https://link-para-certificado-frontend4.com" },
+        { name: "Bootcamp Python AI Backend Developer.", link: "https://link-para-certificado-frontend5.com" },
+        { name: "Git e Versionamento", link: "https://link-para-certificado-frontend6.com" },
+        { name: "", link: "https://link-para-certificado-frontend7.com" },
+        { name: "Figma para Devs", link: "https://link-para-certificado-frontend8.com" },
       ]
     },
     {
-      title: "Backend",
+      title: "Análise de Dados",
       certs: [
-        { name: "Certificado Backend 1", link: "https://link-para-certificado-backend1.com" },
-        { name: "Certificado Backend 2", link: "https://link-para-certificado-backend2.com" }
+        { name: "Excel avançado", link: "https://link-para-certificado-backend1.com" },
+        { name: "Dashboards em Excel", link: "https://link-para-certificado-backend2.com" },
+        { name: "SQL para Análise de Dados", link: "https://link-para-certificado-backend3.com" },
+        { name: "Python para Análise de Dados", link: "https://link-para-certificado-backend4.com" },
+        { name: "Power BI para análise de dados", link: "https://link-para-certificado-backend5.com" },
+        { name: "Machine Learning com Python", link: "https://link-para-certificado-backend6.com" },
+
       ]
     },
     {
-      title: "Dados",
+      title: "Gestão de Projetos",
       certs: [
-        { name: "Certificado Dados 1", link: "https://link-para-certificado-dados1.com" },
-        { name: "Certificado Dados 2", link: "https://link-para-certificado-dados2.com" }
+        { name: " Lean Six Sigma Yellow Belt", link: "https://link-para-certificado-dados1.com" },
+        { name: "Scrum Fundamentals Certified (SFC)", link: "https://link-para-certificado-dados2.com" },
+        { name: "Management Projects-Google", link: "https://link-para-certificado-dados3.com" },
+
       ]
     },
     {
-      title: "Projetos",
+      title: "Soft skills",
       certs: [
-        { name: "Certificado Projetos 1", link: "https://link-para-certificado-projetos1.com" },
-        { name: "Certificado Projetos 2", link: "https://link-para-certificado-projetos2.com" }
+        { name: "Gestão de Pessoas", link: "https://link-para-certificado-projetos1.com" },
+        { name: "Gestão de Equipes", link: "https://link-para-certificado-projetos2.com" },
+        { name: "Gestão de Conflitos", link: "https://link-para-certificado-projetos3.com" },
+        { name: "Gestão de Tempo", link: "https://link-para-certificado-projetos4.com" },
+        { name: "Rotinas Adminstrativas", link: "https://link-para-certificado-projetos5.com" },
       ]
     }
   ];
