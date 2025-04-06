@@ -1,5 +1,6 @@
 // src/App.jsx
 import React, { useEffect, useState } from 'react';
+import VantaBackground from './components/VantaBackground'; // ✅ fundo animado
 import Header from './components/Header';
 import HomeSection from './components/HomeSection';
 import Trajetoria from './components/Trajetoria';
@@ -8,19 +9,15 @@ import Cursos from './components/Cursos';
 import Tecnologias from './components/Tecnologias';
 import Idiomas from './components/Idiomas';
 import Contato from './components/Contato';
-import HolographicBackground from './components/HolographicBackground';
-
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true); // Estado para o modo escuro
+  const [isDarkMode, setIsDarkMode] = useState(true); // 🌗 estado de tema
 
-  // Efeito Sparkle Global: o brilho segue o cursor em toda a página
+  // ✨ Brilho que segue o cursor
   useEffect(() => {
     const handleMouseMove = (e) => {
       const sparkle = document.createElement('div');
-      // A classe 'fixed' com z-index alto garante que o brilho fique sempre visível
       sparkle.className = 'sparkle fixed z-50 w-2.5 h-2.5 bg-pink-500 rounded-full';
-      // Posiciona o brilho na posição do cursor
       sparkle.style.left = `${e.clientX}px`;
       sparkle.style.top = `${e.clientY}px`;
       document.body.appendChild(sparkle);
@@ -30,7 +27,7 @@ function App() {
     return () => document.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Efeito Scroll Reveal Global: anima as seções quando entram na viewport
+  // 👀 Animações ao entrar na viewport
   useEffect(() => {
     const sections = document.querySelectorAll('.scroll-section');
     const observerOptions = { threshold: 0.2 };
@@ -50,12 +47,13 @@ function App() {
       section.classList.add('opacity-0', '-translate-x-5', 'transition', 'duration-800', 'ease-out');
       observer.observe(section);
     });
+
     return () => sections.forEach(section => observer.unobserve(section));
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white relative">
-      <HolographicBackground />
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      <VantaBackground /> {/* 🟦 Fundo animado Vanta */}
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="max-w-6xl mx-auto">
         <HomeSection />

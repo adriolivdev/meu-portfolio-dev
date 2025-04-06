@@ -1,4 +1,4 @@
-// src/components/HomeSection.jsx
+// src/HomeSection.jsx
 import React, { useEffect, useState } from "react";
 
 function HomeSection() {
@@ -60,7 +60,7 @@ function HomeSection() {
             dangerouslySetInnerHTML={{ __html: typewriterText }}
           ></h2>
           <p className="text-justify">
-          Sou desenvolvedora Full-Stack com experiência em HTML, CSS, JavaScript, React, Node.js, Python, SQL e iniciando Java. Estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades e contribuir para projetos inovadores. Hoje, estou desenvolvendo projetos próprios, explorando novas linguagens e ferramentas, e focada em construir um portfólio que reflita tudo o que posso oferecer.
+            Sou desenvolvedora Full-Stack com experiência em HTML, CSS, JavaScript, React, Node.js, Python, SQL e iniciando Java. Estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades e contribuir para projetos inovadores. Hoje, estou desenvolvendo projetos próprios, explorando novas linguagens e ferramentas, e focada em construir um portfólio que reflita tudo o que posso oferecer.
             <br />
           </p>
         </div>
@@ -69,6 +69,7 @@ function HomeSection() {
             src="/v2_imagemprofile.jpg"
             alt="Adriane Oliveira"
             className="rounded-full shadow-lg w-48 md:w-64 animate-float"
+            style={{ boxShadow: "0 0 20px #ff3f81" }}
           />
         </div>
       </div>
