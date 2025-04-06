@@ -6,35 +6,8 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 
 ## 📁 Estrutura de Pastas e Arquivos
 
-meu-portfolio/
-├─ node_modules/                # Dependências instaladas pelo npm
-├─ public/
-│  ├─ Adriane-Oliveira-Curriculo.pdf
-│  ├─ index.html                # Ponto de entrada para o React
-│  ├─ redes_sociais.png
-│  ├─ trajetoria_V1.png
-│  ├─ v1_imagemprofile.jpg
-│  └─ v2_imagemprofile.jpg
-├─ src/
-│  ├─ components/
-│  │  ├─ Contato.jsx
-│  │  ├─ Cursos.jsx
-│  │  ├─ Header.jsx
-│  │  ├─ HolographicBackground.jsx
-│  │  ├─ HomeSection.jsx
-│  │  ├─ Idiomas.jsx
-│  │  ├─ Projetos.jsx
-│  │  ├─ Tecnologias.jsx
-│  │  └─ Trajetoria.jsx
-│  ├─ App.jsx                   # Componente raiz do React
-│  ├─ index.css                 # Estilos globais (importações do Tailwind)
-│  └─ index.jsx                 # Renderiza o App.jsx na DOM
-├─ .gitignore
-├─ package-lock.json
-├─ package.json
-├─ postcss.config.js            # Configurações para o PostCSS (usado pelo Tailwind)
-├─ tailwind.config.js           # Configurações do Tailwind CSS
-└─ README.md                    # Documentação do projeto
+![image](https://github.com/user-attachments/assets/1510c0ef-f44a-4668-a5db-1aee6291bd28)
+
 
 ## Principais Arquivos
 public/index.html
