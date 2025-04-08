@@ -59,7 +59,7 @@ function Contato() {
               download
               className="btn-download inline-block bg-pink-500 text-black py-2 px-4 rounded hover:bg-pink-600"
             >
-              <i className="fas fa-file-download"></i> baixe meu curriculo aqui
+              <i className="fas fa-file-download"></i> Baixe meu curriculo aqui✨
             </a>
           </p>
         </div>
