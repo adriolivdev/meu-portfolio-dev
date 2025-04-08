@@ -1,33 +1,35 @@
+// src/components/VantaBackground.jsx
 import React, { useEffect, useRef, useState } from 'react';
-import NET from 'vanta/dist/vanta.net.min';
 import * as THREE from 'three';
 
-const VantaBackground = () => {
+function VantaBackground() {
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
 
   useEffect(() => {
-    if (!vantaEffect && vantaRef.current) {
-      const effect = NET({
-        el: vantaRef.current,
-        THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0xff3f81,           // Rosa vibrante
-        backgroundColor: 0x23153c, // Roxo escuro
-        points: 10,
-        maxDistance: 20,
-        spacing: 15,
-        showDots: true,
-      });
-
-      setVantaEffect(effect);
-    }
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js';
+    script.async = true;
+    script.onload = () => {
+      if (!vantaEffect && window.VANTA) {
+        setVantaEffect(
+          window.VANTA.NET({
+            el: vantaRef.current,
+            THREE: THREE,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0xe32b6e,           // rosa vibrante
+            backgroundColor: 0x30007,  // roxo escuro
+          })
+        );
+      }
+    };
+    document.body.appendChild(script);
 
     return () => {
       if (vantaEffect) vantaEffect.destroy();
@@ -37,9 +39,9 @@ const VantaBackground = () => {
   return (
     <div
       ref={vantaRef}
-      className="absolute top-0 left-0 w-full h-full z-[-1]"
+      className="absolute top-0 left-0 w-full h-full -z-10"
     />
   );
-};
+}
 
 export default VantaBackground;

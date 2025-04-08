@@ -1,9 +1,10 @@
-// src/HomeSection.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function HomeSection() {
   const [typewriterText, setTypewriterText] = useState("");
+  const vantaRef = useRef(null); // Referência para aplicar o efeito Vanta
 
+  // Efeito de digitação do texto com saudação personalizada por horário
   useEffect(() => {
     const currentHour = new Date().getHours();
     let greetingMessage = "";
@@ -26,9 +27,7 @@ function HomeSection() {
     function type() {
       if (i < greetingMessage.length) {
         const currentChar = greetingMessage[i];
-        if (currentChar === "<") {
-          writingTag = true;
-        }
+        if (currentChar === "<") writingTag = true;
         if (writingTag) {
           tag += currentChar;
         } else {
@@ -47,13 +46,34 @@ function HomeSection() {
     type();
   }, []);
 
+  // Aplica o efeito de fundo animado Vanta.NET
+  useEffect(() => {
+    if (window.VANTA && window.THREE) {
+      window.VANTA.NET({
+        el: vantaRef.current,
+        THREE: window.THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0xe32b6e,           // Rosa vibrante
+        backgroundColor: 0x30007,  // Roxo escuro
+      });
+    }
+  }, []);
+
   return (
     <section
+      ref={vantaRef}
       id="sobre"
-      className="scroll-section p-8 bg-black text-white text-center md:text-left"
+      className="scroll-section p-8 text-white text-center md:text-left relative overflow-hidden"
     >
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="md:w-1/2">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Texto com efeito de quadro espelhado */}
+        <div className="md:w-1/2 bg-black/40 border border-pink-500 shadow-[0_0_30px_5px_rgba(255,0,128,0.3)] backdrop-blur-md p-6 rounded-xl">
           <h2
             id="greeting"
             className="text-3xl mb-4"
@@ -61,9 +81,10 @@ function HomeSection() {
           ></h2>
           <p className="text-justify">
             Sou desenvolvedora Full-Stack com experiência em HTML, CSS, JavaScript, React, Node.js, Python, SQL e iniciando Java. Estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades e contribuir para projetos inovadores. Hoje, estou desenvolvendo projetos próprios, explorando novas linguagens e ferramentas, e focada em construir um portfólio que reflita tudo o que posso oferecer.
-            <br />
           </p>
         </div>
+
+        {/* Imagem da dev com sombra neon */}
         <div className="md:w-1/2 flex justify-end">
           <img
             src="/v2_imagemprofile.jpg"
