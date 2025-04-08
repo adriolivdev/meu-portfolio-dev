@@ -7,14 +7,14 @@ function Projetos() {
       nome: "Study Flow",
       descricao:
         "Aplicação Web Pomodoro com sessões personalizadas, animações motivacionais, e design responsivo. Feito com React, Vite, TypeScript, Tailwind e Vanta.js. Usa arquitetura MVS (Model-View-State) e localStorage para salvar o progresso.",
-      imagem: "/study-flow.png",
+      imagem: "/imagens/study-flow.png",
       link: "https://studyflow-blond.vercel.app/welcome",
     },
     {
-      nome: "Projeto 2",
-      descricao: "Descrição do Projeto 2 com detalhes técnicos e resultados.",
-      imagem: "/images/projeto2-preview.png",
-      link: "#",
+      nome: "OrganizaDocs",
+      descricao: "Esse projeto foi desenvolvido com Python para organizar automaticamente os arquivos de uma pasta local, separando os arquivos por tipo (PDFs, imagens, Videos, Códigos e Etc) em subspastas, e gerando relatórios completo com a data da modificação de cada item",
+      imagem: "/imagens/organizaDocs2.png",
+      link: "https://github.com/adriolivdev/OrganizaDocs/tree/main/dist",
     },
     {
       nome: "Projeto 3",

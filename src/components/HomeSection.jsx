@@ -87,7 +87,7 @@ function HomeSection() {
         {/* Imagem da dev com sombra neon */}
         <div className="md:w-1/2 flex justify-end">
           <img
-            src="/v2_imagemprofile.jpg"
+            src="/imagens/v2_imagemprofile.jpg"
             alt="Adriane Oliveira"
             className="rounded-full shadow-lg w-48 md:w-64 animate-float"
             style={{ boxShadow: "0 0 20px #ff3f81" }}

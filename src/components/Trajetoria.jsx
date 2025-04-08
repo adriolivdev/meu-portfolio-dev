@@ -7,7 +7,7 @@ function Trajetoria() {
       <h2 className="text-3xl mb-6">Minha Trajetória Profissional</h2>
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="md:w-1/2 text-center">
-          <img src="/trajetoria_V1.png" alt="Trajetória Profissional" className="rounded-lg shadow-lg max-w-full" />
+          <img src="imagens/trajetoria_V1.png" alt="Trajetória Profissional" className="rounded-lg shadow-lg max-w-full" />
         </div>
         <div className="md:w-1/2">
           <p className="text-justify">

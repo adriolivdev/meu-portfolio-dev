@@ -65,7 +65,7 @@ function Contato() {
         </div>
         <div className="md:w-1/2 text-center">
           <img
-            src="/redes_sociais.png"
+            src="/imagens/redes_sociais.png"
             alt="Imagem de Contato"
             className="rounded-lg shadow-lg max-w-full w-3/4 mx-auto"
           />
