@@ -47,7 +47,7 @@ function Projetos() {
         "Landing page para a Kaizen Code Digital, agência que oferece soluções criativas e tecnológicas para microempreendedores e pequenas empresas. Implementa arquitetura modular, menu mobile animado, botão flutuante do WhatsApp, robô mascote interativo, React.js com Vite, Tailwind CSS, React Icons e Vanta.js. Deploy via Vercel.",
       imagem: "/imagens/kaizen-project.png",
       link: "https://kaizencode-landing.vercel.app/",
-      status: "Finalizado",
+      status: "Em desenvolvimento",
       objetivo:
         "Apresentar os serviços da Kaizen Code Digital de forma clara e moderna.",
       stacks: ["React", "Vite", "Tailwind CSS", "JavaScript"],
