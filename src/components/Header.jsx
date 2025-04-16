@@ -29,7 +29,7 @@ export default function Header() {
           Projetos
         </a>
         <a href="#cursos" className="text-pink-500 hover:text-white transition">
-          Cursos
+          Cursos & Certificações
         </a>
         <a href="#tecnologias" className="text-pink-500 hover:text-white transition">
           Tecnologias
