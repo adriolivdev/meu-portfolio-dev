@@ -48,7 +48,7 @@ function Cursos() {
 
   return (
     <section id="cursos" className="scroll-section p-8 bg-black text-white text-center">
-      <h2 className="text-3xl mb-6">Cursos e Certificações</h2>
+      <h2 className="text-3xl mb-6 font-bold">Cursos e Certificações</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {cursos.map((item, idx) => (
           <div key={idx} className="bg-gray-900 p-4 rounded-lg border-2 border-pink-500 text-left">
