@@ -24,3 +24,35 @@
     transform: scale(2);
   }
 }
+
+/* Animação de Neon para a borda */
+@keyframes neonBorder {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255,20,147,0.7), 0 0 10px rgba(255,20,147,0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255,20,147,1), 0 0 30px rgba(255,20,147,1);
+  }
+}
+
+.animate-neon-border {
+  animation: neonBorder 3s linear infinite;
+  border-color: rgba(255,20,147,0.7);
+}
+
+/* Animação de float sutil para dar efeito de flutuação */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 2.5s ease-in-out infinite;
+}

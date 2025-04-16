@@ -7,7 +7,7 @@ function Contato() {
       id="contato"
       className="scroll-section p-8 bg-black text-white text-center"
     >
-      <h2 className="text-3xl mb-6">Meus Contatos</h2>
+      <h2 className="text-3xl mb-6 font-bold">Meus Contatos</h2>
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="md:w-1/2 text-left">
           <h3 className="text-xl mb-2">Entre em Contato Comigo</h3>
@@ -70,6 +70,7 @@ function Contato() {
             className="rounded-lg shadow-lg max-w-full w-3/4 mx-auto"
           />
         </div>
+        
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 // src/components/Projetos.jsx
-
 import React from 'react';
 import {
   FaBullseye,
@@ -46,7 +45,7 @@ function Projetos() {
       nome: "Kaizen-Landing page",
       descricao:
         "Landing page para a Kaizen Code Digital, agência que oferece soluções criativas e tecnológicas para microempreendedores e pequenas empresas. Implementa arquitetura modular, menu mobile animado, botão flutuante do WhatsApp, robô mascote interativo, React.js com Vite, Tailwind CSS, React Icons e Vanta.js. Deploy via Vercel.",
-      imagem: "/images/kaizen-project.png",
+      imagem: "/imagens/kaizen-project.png",
       link: "https://kaizencode-landing.vercel.app/",
       status: "Finalizado",
       objetivo:
@@ -57,44 +56,31 @@ function Projetos() {
   ];
 
   return (
-    <section
-      id="projetos"
-      className="scroll-section p-8 bg-black text-white text-center"
-    >
-      <h2 className="text-3xl mb-6 font-bold">Meus Projetos</h2>
+    <section id="projetos" className="scroll-section p-8 bg-black text-white text-center">
+      <h2 className="text-3xl mb-6 font-bold">Projetos Recentes</h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projetos.map((projeto, index) => (
           <div
             key={index}
-            className="
-              relative p-6 rounded-lg border-2 border-pink-500
-              hover:shadow-[0_0_20px_rgba(236,72,153,0.8)]
-              transition-all transform hover:-translate-y-2
-              bg-gray-800
-            "
+            className="relative flex flex-col h-full min-h-[550px] p-6 rounded-lg border-2 border-pink-500 hover:shadow-[0_0_20px_rgba(236,72,153,0.8)] transition-all transform hover:-translate-y-2 bg-gray-800"
           >
             {/* Título */}
             <h3 className="text-2xl mb-3 font-bold text-pink-400">
               {projeto.nome}
             </h3>
 
-            {/* Imagem com hover */}
+            {/* Imagem com efeito de hover */}
             <div className="relative group overflow-hidden rounded-lg mb-4">
               <img
                 src={projeto.imagem}
                 alt={`Preview de ${projeto.nome}`}
-                className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-300"
+                className="w-full sm:h-64 md:h-56 lg:h-72 object-cover transform group-hover:scale-110 transition duration-300"
               />
               <a
                 href={projeto.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  absolute inset-0 flex items-center justify-center
-                  bg-black bg-opacity-60
-                  opacity-0 group-hover:opacity-100
-                  transition duration-300
-                "
+                className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300"
               >
                 <span className="text-pink-500 font-bold tracking-wide">
                   Ver Projeto
@@ -107,8 +93,8 @@ function Projetos() {
               {projeto.descricao}
             </p>
 
-            {/* Ícones e informações extras */}
-            <div className="text-left text-sm text-gray-300 space-y-2 mb-4">
+            {/* Ícones e informações extras com espaçamento aumentado */}
+            <div className="text-left text-sm text-gray-300 space-y-4 mb-4">
               {/* Objetivo */}
               <div className="flex items-start">
                 <FaBullseye className="text-pink-500 w-4 h-4 mr-2 mt-1" />
@@ -125,8 +111,8 @@ function Projetos() {
                   {projeto.stacks.join(", ")}
                 </p>
               </div>
-              {/* Arquitetura */}
-              <div className="flex items-start">
+              {/* Arquitetura com margem adicional */}
+              <div className="flex items-start mt-2">
                 <FaProjectDiagram className="text-pink-500 w-4 h-4 mr-2 mt-1" />
                 <p>
                   <span className="font-bold text-white">Arquitetura:</span>{" "}
@@ -135,19 +121,25 @@ function Projetos() {
               </div>
             </div>
 
-            {/* Status (botão não clicável) */}
-            <div className="flex items-center justify-center">
+            {/* Área de botões alinhada na parte inferior */}
+            <div className="mt-auto flex flex-col items-center justify-center space-y-2">
+              {/* Botão de Status (não clicável) */}
               <button
                 disabled
-                className="
-                  cursor-not-allowed py-2 px-4 text-sm font-semibold
-                  text-white rounded-md bg-pink-600
-                  flex items-center
-                "
+                className="cursor-not-allowed py-2 px-4 text-sm font-semibold text-white rounded-md bg-pink-600 flex items-center"
               >
                 {getStatusIcon(projeto.status)}
                 <span className="ml-1">{projeto.status}</span>
               </button>
+              {/* Botão "Ver Projeto" */}
+              <a
+                href={projeto.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-2 px-4 text-sm font-semibold text-white rounded-md bg-pink-500 border-2 border-transparent transition-all duration-300 transform hover:bg-black hover:border-pink-500 hover:scale-105"
+              >
+                Ver Projeto
+              </a>
             </div>
           </div>
         ))}
