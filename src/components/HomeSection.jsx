@@ -80,7 +80,7 @@ function HomeSection() {
             dangerouslySetInnerHTML={{ __html: typewriterText }}
           ></h2>
           <p className="text-justify">
-            Sou desenvolvedora Full-Stack com experiência em HTML, CSS, JavaScript, React, Node.js, Python, SQL e iniciando Java. Estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades e contribuir para projetos inovadores. Hoje, estou desenvolvendo projetos próprios, explorando novas linguagens e ferramentas, e focada em construir um portfólio que reflita tudo o que posso oferecer.
+           Desenvolvedora Full-Stack com experiência em tecnologias como HTML, CSS, JavaScript, React, Node.js, Python, SQL e, atualmente, iniciando em Java. Desde o início da minha carreira, sempre busquei aprender novas ferramentas e métodos que me permitissem criar soluções inteligentes e escaláveis. Acredito que cada projeto é uma oportunidade de evoluir e, por isso, estou constantemente experimentando novas linguagens e frameworks. Meu objetivo é unir criatividade com eficiência técnica, contribuindo para projetos inovadores e desafiadores.
           </p>
         </div>
 
