@@ -73,7 +73,7 @@ function HomeSection() {
         backgroundColor:  0x000000,   // Roxo escuro
         points: 10.0,                // mais pontos na rede
         maxDistance: 30.0,          // distância maior para traçar as linhas
-        spacing: 20.0,              // aumenta o espaçamento da grid
+        spacing: 25.0,              // aumenta o espaçamento da grid
       });
     }
   }, []);
