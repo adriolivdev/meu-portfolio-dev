@@ -5,7 +5,6 @@ function HomeSection() {
   const [typewriterText, setTypewriterText] = useState("");
   const vantaRef = useRef(null);
 
-  // Efeito de digitação com saudação personalizada
   useEffect(() => {
     const currentHour = new Date().getHours();
     let greetingMessage = "";
@@ -56,7 +55,6 @@ function HomeSection() {
     type();
   }, []);
 
-  // Aplica o efeito de fundo animado Vanta.NET com linhas mais abertas
   useEffect(() => {
     if (window.VANTA && window.THREE) {
       window.VANTA.NET({
@@ -65,15 +63,15 @@ function HomeSection() {
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
+        minHeight: 100.0,
+        minWidth: 100.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: 0xe32b6e,            // Rosa vibrante
-        backgroundColor:  0x000000,   // Roxo escuro
-        points: 10.0,                // mais pontos na rede
-        maxDistance: 30.0,          // distância maior para traçar as linhas
-        spacing: 30.0,              // aumenta o espaçamento da grid
+        color: 0xe32b6e,
+        backgroundColor: 0x000000,
+        points: 10.0,
+        maxDistance: 30.0,
+        spacing: 30.0,
       });
     }
   }, []);
@@ -86,7 +84,7 @@ function HomeSection() {
     >
       <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
         {/* Texto */}
-        <div className="w-full md:w-1/2 bg-black/40 border border-pink-500 shadow-[0_0_30px_5px_rgba(255,0,128,0.3)] backdrop-blur-md p-6 rounded-xl">
+        <div className="w-full md:w-1/2 bg-black/40 border border-pink-500 shadow-[0_0_15px_2px_rgba(255,0,128,0.2)] backdrop-blur-md p-6 rounded-xl">
           <h2
             id="greeting"
             className="text-3xl mb-4 tracking-tighter md:tracking-tight"
@@ -106,13 +104,13 @@ function HomeSection() {
           </p>
         </div>
 
-        {/* Imagem: mobile centralizada, desktop à direita */}
+        {/* Imagem */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <img
             src="/imagens/v2_imagemprofile.jpg"
             alt="Adriane Oliveira"
             className="rounded-full shadow-lg w-48 md:w-64 animate-float"
-            style={{ boxShadow: "0 0 15px #ff3f81" }}
+            style={{ boxShadow: "0 0 8px #ff3f81" }}
           />
         </div>
       </div>

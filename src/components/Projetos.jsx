@@ -62,7 +62,7 @@ function Projetos() {
         {projetos.map((projeto, index) => (
           <div
             key={index}
-            className="relative flex flex-col h-full min-h-[550px] p-6 rounded-lg border-2 border-pink-500 hover:shadow-[0_0_20px_rgba(236,72,153,0.8)] transition-all transform hover:-translate-y-2 bg-gray-800"
+            className="relative flex flex-col h-full min-h-[550px] p-6 rounded-lg border-2 border-pink-500 transition-all transform hover:-translate-y-2 bg-gray-800"
           >
             {/* Título */}
             <h3 className="text-2xl mb-3 font-bold text-pink-400">
