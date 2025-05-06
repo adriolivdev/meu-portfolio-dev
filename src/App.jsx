@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import VantaBackground from './components/VantaBackground';
 import Header from './components/Header';
 import HomeSection from './components/HomeSection';
@@ -14,48 +14,56 @@ import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [lastSparkleTime, setLastSparkleTime] = useState(0);
 
-  // Efeito "sparkle"
+  // Efeito sparkle otimizado (limita para no máximo 1 sparkle a cada 100ms)
+  const handleMouseMove = useCallback((e) => {
+    const now = Date.now();
+    if (now - lastSparkleTime < 100) return;
+    setLastSparkleTime(now);
+
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle fixed z-50 w-2.5 h-2.5 bg-pink-500 rounded-full pointer-events-none';
+    sparkle.style.left = `${e.clientX}px`;
+    sparkle.style.top = `${e.clientY}px`;
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 600); // duração menor para aliviar o DOM
+  }, [lastSparkleTime]);
+
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const sparkle = document.createElement('div');
-      sparkle.className = 'sparkle fixed z-50 w-2.5 h-2.5 bg-pink-500 rounded-full';
-      sparkle.style.left = `${e.clientX}px`;
-      sparkle.style.top = `${e.clientY}px`;
-      document.body.appendChild(sparkle);
-      setTimeout(() => sparkle.remove(), 800);
-    };
     document.addEventListener('mousemove', handleMouseMove);
     return () => document.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  }, [handleMouseMove]);
 
-  // Animações de entrada para seções
+  // Animações de entrada otimizadas com `once: true` e `unobserve` após entrada
   useEffect(() => {
     const sections = document.querySelectorAll('.scroll-section');
-    const observerOptions = { threshold: 0.2 };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100', 'translate-x-0');
-          entry.target.classList.remove('opacity-0', '-translate-x-5');
-        } else {
-          entry.target.classList.remove('opacity-100', 'translate-x-0');
-          entry.target.classList.add('opacity-0', '-translate-x-5');
-        }
-      });
-    }, observerOptions);
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-x-0');
+            entry.target.classList.remove('opacity-0', '-translate-x-5');
+            obs.unobserve(entry.target); // Desativa após animação
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
     sections.forEach((section) => {
-      section.classList.add('opacity-0', '-translate-x-5', 'transition', 'duration-800', 'ease-out');
+      section.classList.add('opacity-0', '-translate-x-5', 'transition', 'duration-700', 'ease-out');
       observer.observe(section);
     });
-    return () => sections.forEach((section) => observer.unobserve(section));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <VantaBackground />
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      {/* Adiciona padding-top suficiente para compensar a altura do header fixo */}
       <main className="pt-24 max-w-6xl mx-auto">
         <HomeSection />
         <Trajetoria />

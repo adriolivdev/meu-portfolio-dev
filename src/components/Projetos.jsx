@@ -36,7 +36,7 @@ function Projetos() {
         "Esse projeto foi desenvolvido com Python para organizar automaticamente os arquivos de uma pasta local, separando por tipo (PDFs, imagens, vídeos, códigos etc.), e gerando relatórios completos com a data de modificação de cada item.",
       imagem: "/imagens/organizaDocs2.png",
       link: "https://github.com/adriolivdev/OrganizaDocs/tree/main/dist",
-      status: "Finalizado",
+      status: "Concluído",
       objetivo: "Manter pastas locais organizadas de forma automatizada.",
       stacks: ["Python"],
       arquitetura: "Scripts e módulos internos",
@@ -44,15 +44,28 @@ function Projetos() {
     {
       nome: "Kaizen-Landing page",
       descricao:
-        "Landing page para a Kaizen Code Digital, agência que oferece soluções criativas e tecnológicas para microempreendedores e pequenas empresas. Implementa arquitetura modular, menu mobile animado, botão flutuante do WhatsApp, robô mascote interativo, React.js com Vite, Tailwind CSS, React Icons e Vanta.js. Deploy via Vercel.",
-      imagem: "/imagens/kaizen-project.png",
-      link: "https://kaizencode-landing.vercel.app/",
-      status: "Em desenvolvimento",
+        "Landing page para a Kaizen Code Digital, agência que oferece soluções criativas e tecnológicas para microempreendedores e pequenas empresas. Implementa arquitetura modular, menu mobile animado, botão flutuante do WhatsApp, React.js com Vite, Tailwind CSS, React Icons e Vanta.js. Deploy via Vercel.",
+      imagem: "/imagens/lp-kaizencode.png",
+      link: "https://kaizencodedigital.vercel.app/",
+      status: "Conluído",
       objetivo:
         "Apresentar os serviços da Kaizen Code Digital de forma clara e moderna.",
       stacks: ["React", "Vite", "Tailwind CSS", "JavaScript"],
       arquitetura: "Componentização + Hooks",
     },
+    {
+      nome: "Currículo+",
+      descricao:
+        "Aplicação web full stack para criação de currículos em PDF. Possui formulário dividido por etapas, sugestões automáticas de objetivo profissional baseadas na área e senioridade, preview em tempo real e exportação final com layout profissional.",
+      imagem: "/imagens/curriculoPlus.png", // (coloque o caminho correto da imagem na pasta do seu projeto)
+      link: "https://curriculo-plus.vercel.app/",
+      status: "Em evolução",
+      objetivo:
+        "Facilitar a criação de currículos para pessoas que têm dificuldade ou pouco tempo para montar um documento profissional do zero.",
+      stacks: ["Vue 3", "Pinia", "Tailwind CSS", "Vite", "Flask", "Python", "pdfkit"],
+      arquitetura: "SPA com API REST + Geração dinâmica de PDF via servidor Flask",
+    }
+    
   ];
 
   return (
